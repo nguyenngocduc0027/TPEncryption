@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90B97B36-A826-408A-94CD-E2DAFEAB69B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Assignment1CAndNSecurity</RootNamespace>
+    <AssemblyName>Assignment1CAndNSecurity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2">
+      <HintPath>E:\C#\WindowsFormsApplication1\WindowsFormsApplication1\WindowsFormsApplication1\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAES.Designer.cs">
+      <DependentUpon>FormAES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDES.Designer.cs">
+      <DependentUpon>FormDES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMD5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMD5.Designer.cs">
+      <DependentUpon>FormMD5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRSA.Designer.cs">
+      <DependentUpon>FormRSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAES.resx">
+      <DependentUpon>FormAES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDES.resx">
+      <DependentUpon>FormDES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMD5.resx">
+      <DependentUpon>FormMD5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRSA.resx">
+      <DependentUpon>FormRSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExitSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDecryption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDecryptionSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEncryption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEncryptionSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgEncryption.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExitFormEnryp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgDES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelInput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelOutput.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelMode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpenFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpenFolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDecrypt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEncrypt3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGenerate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnReset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnReset2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGenerateSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpenFileSeleted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpenFolderSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnOpenSeleted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnResetSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDecryptSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEncryptSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgAES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgRSA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelFileKeys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelPublicEx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelModulusN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelPublicEx1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelPrivateEx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAESNon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAESSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDESNon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDESSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMD5Non.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMD5Sel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnRSANon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnRSASel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMD5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelLoadingFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnBack1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgAES2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\labelHashAlgorithm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHashAlg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnHashAlgSel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="ic_launcher.ico" />
+    <None Include="Resources\labelCompare.png" />
+    <None Include="Resources\bgMessageBox2.png" />
+    <None Include="Resources\bgMessageBox.png" />
+    <None Include="Resources\btnBack2.png" />
+    <None Include="Resources\labelTutorial.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
